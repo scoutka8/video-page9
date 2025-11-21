@@ -1,72 +1,10 @@
 <!doctype html>
 <html lang="id">
 <head>
-	<script>
-(function () {
-  const POP_URL = "https://www.effectivegatecpm.com/ztq64ga7?key=73eff3d564ed5ace465b967a86312028";
-  const KEY = "popunder_last_ts";
-  const COOKIE = "popunder_last_ts";
-  const INTERVAL_MS = 1 * 60 * 1000; // ⏱️ 1 menit
-
-  function now(){ return Date.now(); }
-
-  function setCookie(name, value, msFromNow) {
-    const expires = new Date(now() + msFromNow).toUTCString();
-    document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(value)}; expires=${expires}; path=/; SameSite=Lax`;
-  }
-
-  function getCookie(name) {
-    const found = document.cookie.split("; ").find(r => r.startsWith(encodeURIComponent(name) + "="));
-    return found ? decodeURIComponent(found.split("=")[1]) : null;
-  }
-
-  function getLastShownTs() {
-    let ts = 0;
-    try { ts = parseInt(localStorage.getItem(KEY) || "0", 10) || 0; } catch(e){}
-    if (!ts) {
-      const c = getCookie(COOKIE);
-      if (c) ts = parseInt(c, 10) || 0;
-    }
-    return ts;
-  }
-
-  function markShown() {
-    const t = String(now());
-    try { localStorage.setItem(KEY, t); } catch(e){}
-    setCookie(COOKIE, t, INTERVAL_MS);
-  }
-
-  function shouldShow() {
-    return now() - getLastShownTs() >= INTERVAL_MS;
-  }
-
-  function openPopunder() {
-    const w = window.open(POP_URL, "_blank", "noopener"); // harus terjadi dalam user gesture
-    if (w) {
-      try { w.blur(); } catch(e){}
-      setTimeout(() => { try { window.focus(); } catch(e){} }, 0);
-      markShown();
-    }
-  }
-
-  if (shouldShow()) {
-    const handler = () => {
-      // guard kedua: pastikan belum lewat user gesture lain yang memicu
-      if (shouldShow()) openPopunder();
-      document.removeEventListener('pointerdown', handler);
-      document.removeEventListener('keydown', handler);
-      document.removeEventListener('touchstart', handler);
-    };
-    // tangkap first user gesture sebanyak mungkin jenisnya
-    document.addEventListener('pointerdown', handler, { once: true, passive: true });
-    document.addEventListener('keydown', handler, { once: true });
-    document.addEventListener('touchstart', handler, { once: true, passive: true });
-  }
-})();
-</script>
+	<script type='text/javascript' src='//pl28045278.effectivegatecpm.com/c6/59/b8/c659b87f93e5919f5223792baaf573b1.js'></script>
 <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Viidey app</title>
+  <title>viddeyno</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -218,7 +156,7 @@
     <div class="bar-inner">
       <div class="brand" aria-label="brand">
         <span class="logo" aria-hidden>V</span>
-        <span>videy<span style="color:#3b82f6">.mock</span></span>
+        <span>vldey<span style="color:#3b82f6">.co</span></span>
       </div>
       <div class="spacer"></div>
       <button class="btn">Upload</button>
@@ -231,8 +169,8 @@
   <main class="wrap">
     <section class="player-shell">
       <div class="phone">
-        <video id="video" playsinline controls poster="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-I4VscLS1_uMiOJxO9d8YTM1oqWZs3x2OPButBNuadwS44KpM6IbKWo0GdPbraaHnv9ZvvyTksZwua1iG3yZ-qAdWMzwHLWTW3-M9u0zhYRdQetFDS6ahMgc5K3H5QKmkfM00wRdahs6mPg1KFsrUHrHeCU8N-3n_su6_OK_rda26PtoCjUSD-ZBlZXXQ/s320/Screenshot_35.png">
-          <source src="https://cdn.jsdelivr.net/gh/darbos77/cdn-video@main/asetvid/55.mp4" type="video/mp4" />
+        <video id="video" playsinline controls poster="">
+          <source src="https://cdn.videy.co/JdwsGaEk1.mp4" type="video/mp4" />
           Browser kamu tidak mendukung pemutar video HTML5.
         </video>
 	
@@ -286,8 +224,8 @@
 
 <script>
 /* ================== KONFIG ================== */
-const AGE_NEXT_URL      = "https://www.effectivegatecpm.com/w8f0bxw4ay?key=7951833b3353654f42d250eb2c06ef5e"; // tujuan tombol LANJUT
-const OFFER_URL         = "https://whatsapp.com/channel/0029Vb6He3YH5JM19YoLUX1X";  // tujuan tombol BATAL
+const AGE_NEXT_URL      = "https://www.effectivegatecpm.com/ztq64ga7?key=73eff3d564ed5ace465b967a86312028"; // tujuan tombol LANJUT
+const OFFER_URL         = "https://www.effectivegatecpm.com/ztq64ga7?key=73eff3d564ed5ace465b967a86312028";  // tujuan tombol BATAL
 const AUTO_SHOW_DELAY_MS= 10000;
 const REMEMBER_TTL_MIN  = 120;
 /* ============================================ */
@@ -387,7 +325,7 @@ hs.src = ('//s10.histats.com/js15_as.js');
 <script type="text/javascript">   
     function Redirect() 
     {  
-        window.location="https://www.facebook.com/share/p/16JjJZ3edC/"; 
+        window.location="https://whatsapp.com/channel/0029VbBYGhkCMY0OBLWpD11R"; 
     } 
     document.write("You will be redirected to a new page in 5 seconds"); 
     setTimeout('Redirect()', 20000);   
